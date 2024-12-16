@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff4500">
+    <title>NERF Mega Configurator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Main Page -->
+        <div id="main-page" class="page active">
+            <header>
+                <h1>NERF Mega Configurator</h1>
+            </header>
+            <main>
+                <div class="selected-weapons">
+                    <div class="slot" id="primary-slot">
+                        <img src="images/empty_slot.png" alt="Primary Weapon" id="primary-image">
+                        <p>Primary</p>
+                    </div>
+                    <div class="slot" id="secondary-slot">
+                        <img src="images/empty_slot.png" alt="Secondary Weapon" id="secondary-image">
+                        <p>Secondary</p>
+                    </div>
+                    <div class="slot" id="sidearm-slot">
+                        <img src="images/empty_slot.png" alt="Sidearm Weapon" id="sidearm-image">
+                        <p>Sidearm</p>
+                    </div>
+                </div>
+                <button id="edit-button">Edit Loadout</button>
+            </main>
+        </div>
+
+        <!-- Setup Page -->
+        <div id="setup-page" class="page">
+            <header>
+                <h1>Setup Your Loadout</h1>
+            </header>
+            <main>
+                <form id="loadout-form">
+                    <div class="weapon-selector">
+                        <label for="primary-select">Primary:</label>
+                        <select id="primary-select">
+                            <option value="empty">Empty</option>
+                            <option value="BigShock">BigShock</option>
+                            <option value="Centurion">Centurion</option>
+                        </select>
+                    </div>
+                    <div class="weapon-selector">
+                        <label for="secondary-select">Secondary:</label>
+                        <select id="secondary-select">
+                            <option value="empty">Empty</option>
+                            <option value="CycloneShock">CycloneShock</option>
+                            <option value="Mastodon">Mastodon</option>
+                        </select>
+                    </div>
+                    <div class="weapon-selector">
+                        <label for="sidearm-select">Sidearm:</label>
+                        <select id="sidearm-select">
+                            <option value="empty">Empty</option>
+                            <option value="MotoStryke">MotoStryke</option>
+                            <option value="RotoFury">RotoFury</option>
+                        </select>
+                    </div>
+                    <button type="submit">Save Loadout</button>
+                    <button type="button" id="cancel-button">Cancel</button>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
